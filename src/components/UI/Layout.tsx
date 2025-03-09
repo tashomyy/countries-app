@@ -2,10 +2,13 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = () => {
+interface LayoutProps {
+  toggleTheme: () => void;
+}
+const Layout = ({ toggleTheme }: LayoutProps) => {
   return (
     <div>
-      <Header />
+      <Header toggleTheme={toggleTheme} />
       <main>
         <Outlet />
       </main>
