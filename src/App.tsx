@@ -4,12 +4,9 @@ import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import { ConfigProvider } from "antd";
 import "./App.css";
-import { getAntTheme } from "./lib/antdTheme";
 
 function App() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-
-  const antTheme = getAntTheme(theme);
+  const { theme, toggleTheme, antTheme } = useContext(ThemeContext);
 
   return (
     <>
