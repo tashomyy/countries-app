@@ -4,12 +4,13 @@ import Footer from "./Footer";
 
 interface LayoutProps {
   toggleTheme: () => void;
+  theme: string;
 }
-const Layout = ({ toggleTheme }: LayoutProps) => {
+const Layout = ({ toggleTheme, theme }: LayoutProps) => {
   return (
     <div className="h-screen flex flex-col">
-      <Header toggleTheme={toggleTheme} />
-      <main>
+      <Header toggleTheme={toggleTheme} theme={theme} />
+      <main className="tw-px">
         <Outlet />
       </main>
       <Footer />

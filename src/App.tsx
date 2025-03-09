@@ -12,7 +12,7 @@ function App() {
     <>
       <ConfigProvider theme={antTheme}>
         <ToastContainer />
-        <AppRoutes toggleTheme={toggleTheme} />
+        <AppRoutes toggleTheme={toggleTheme} theme={theme} />
       </ConfigProvider>
     </>
   );

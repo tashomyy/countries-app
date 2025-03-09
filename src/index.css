@@ -16,3 +16,9 @@
   --text-primary: var(--dark-text-primary);
   --text-secondary: var(--dark-text-secondary);
 }
+
+/* all of the custom classes for tailwind that use apply will have the prefix tw */
+
+.tw-px {
+  @apply p-4 md:p-6 lg:p-8;
+}
