@@ -66,26 +66,23 @@ const Header = ({ toggleTheme }: HeaderProps) => {
   const onChangeTheme = () => toggleTheme();
 
   return (
-    <>
-      <Menu
-        onClick={onClick}
-        style={{ width: 256 }}
-        defaultOpenKeys={["sub1"]}
-        selectedKeys={[current]}
-        mode="inline"
-        items={items}
-      />
+    <div className="sticky top-0">
       <Menu
         onClick={onClick}
         selectedKeys={[current]}
         mode="horizontal"
         items={items}
+        className="!hidden md:!flex"
       />
-      <Dropdown menu={{ items }} placement="bottomRight">
+      <Dropdown
+        menu={{ items }}
+        placement="bottomRight"
+        className="!block md:!hidden"
+      >
         <Button>bottomRight</Button>
       </Dropdown>
       <Button onClick={onChangeTheme}>Change theme</Button>
-    </>
+    </div>
   );
 };
 

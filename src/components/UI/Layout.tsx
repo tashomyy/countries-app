@@ -7,7 +7,7 @@ interface LayoutProps {
 }
 const Layout = ({ toggleTheme }: LayoutProps) => {
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       <Header toggleTheme={toggleTheme} />
       <main>
         <Outlet />
