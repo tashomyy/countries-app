@@ -1,11 +1,12 @@
 import { ToastContainer } from "react-toastify";
+import AppRoutes from "./Routes";
 
 function App() {
   return (
     <>
       {/* setting up the dev branch */}
       <ToastContainer />
-      <h2 className="text-lg m-5 text-center">This is the Countries App</h2>
+      <AppRoutes />
     </>
   );
 }
